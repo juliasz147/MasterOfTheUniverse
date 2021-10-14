@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController characterController;
     public float speed = 5f;
-    public float gravity = -9f;
+    public float jumpSpeed = -2f;
+    public float gravity = -20f;
     Vector3 velocity;
 
     // Start is called before the first frame update
@@ -23,6 +24,16 @@ public class PlayerController : MonoBehaviour
 
     void movePlayer()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (characterController.isGrounded && Input.GetButton("Jump"))
+            {
+                velocity.y = jumpSpeed;
+            }
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -32,5 +43,6 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         characterController.Move(velocity * Time.deltaTime);
+
     }
 }
