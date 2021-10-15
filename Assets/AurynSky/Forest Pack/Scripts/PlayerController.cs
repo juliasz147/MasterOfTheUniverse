@@ -41,14 +41,12 @@ public class PlayerController : MonoBehaviour
         Vector3 move = new Vector3(x, 0, z);
         move.Normalize();
 
-        transform.Translate(move * 150 * Time.deltaTime, Space.World);
+        transform.Translate(move * 300 * Time.deltaTime, Space.Self);
 
         if(move != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 15 * Time.deltaTime);
-
-
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 300 * Time.deltaTime);
         }
         //end
 
