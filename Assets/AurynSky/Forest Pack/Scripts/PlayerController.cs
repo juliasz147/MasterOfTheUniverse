@@ -37,7 +37,21 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        //start
+        Vector3 move = new Vector3(x, 0, z);
+        move.Normalize();
+
+        transform.Translate(move * 150 * Time.deltaTime, Space.World);
+
+        if(move != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 15 * Time.deltaTime);
+
+
+        }
+        //end
+
         characterController.Move(move * speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
