@@ -132,7 +132,13 @@ namespace Invector.vCharacterController
                 Debug.Log("Coin gained");
                 Destroy(collision.gameObject);
             }
-           
+
+            if (collision.gameObject.tag == "Enemy")
+            {
+                Debug.Log("Collided with enemy");
+                Destroy(gameObject);
+            }
+
         }
     }
 }
