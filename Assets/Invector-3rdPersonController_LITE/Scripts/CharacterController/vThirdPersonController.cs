@@ -124,5 +124,15 @@ namespace Invector.vCharacterController
             else
                 animator.CrossFadeInFixedTime("JumpMove", .2f);
         }
+
+        public void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Coin")
+            {
+                Debug.Log("Coin gained");
+                Destroy(collision.gameObject);
+            }
+           
+        }
     }
 }

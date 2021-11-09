@@ -8,6 +8,9 @@ TagManager:
   - Projectile
   - Key
   - Enemy
+  - Fire
+  - PlayerEyes
+  - Coin
   layers:
   - Default
   - TransparentFX
