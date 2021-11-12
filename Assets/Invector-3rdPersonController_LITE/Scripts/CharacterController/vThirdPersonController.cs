@@ -1,9 +1,17 @@
 ﻿using UnityEngine;
+using TMPro;
 
 namespace Invector.vCharacterController
 {
     public class vThirdPersonController : vThirdPersonAnimator
     {
+        public TMP_Text coinCounter_TMP;
+        int numOfCoins = 0;
+
+        private void Update()
+        {
+            coinCounter_TMP.text = numOfCoins.ToString();
+        }
         public virtual void ControlAnimatorRootMotion()
         {
             if (!this.enabled) return;
@@ -131,6 +139,7 @@ namespace Invector.vCharacterController
             {
                 Debug.Log("Coin gained");
                 Destroy(collision.gameObject);
+                numOfCoins += 1;
             }
 
             if (collision.gameObject.tag == "Enemy")
