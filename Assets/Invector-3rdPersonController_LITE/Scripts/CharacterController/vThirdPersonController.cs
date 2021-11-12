@@ -11,6 +11,12 @@ namespace Invector.vCharacterController
         private void Update()
         {
             coinCounter_TMP.text = numOfCoins.ToString();
+            if(gameObject.transform.position.y <= 12)
+            {
+                Debug.Log("player has fallen off the world");
+                Destroy(gameObject);
+                
+            }
         }
         public virtual void ControlAnimatorRootMotion()
         {
