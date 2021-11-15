@@ -14,7 +14,8 @@ namespace Invector.vCharacterController
             if(gameObject.transform.position.y <= 12)
             {
                 Debug.Log("player has fallen off the world");
-                Destroy(gameObject);
+                // Destroy(gameObject);
+                 Application.LoadLevel ("Level 1");
                 
             }
         }
