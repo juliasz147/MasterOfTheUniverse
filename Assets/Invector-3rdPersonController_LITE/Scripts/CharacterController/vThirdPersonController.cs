@@ -6,7 +6,8 @@ namespace Invector.vCharacterController
     public class vThirdPersonController : vThirdPersonAnimator
     {
         public TMP_Text coinCounter_TMP;
-        int numOfCoins = 0;
+        private static int numOfCoins = 0;
+        // public int progressBarValue = 10;
 
         private void Update()
         {
@@ -15,9 +16,10 @@ namespace Invector.vCharacterController
             {
                 Debug.Log("player has fallen off the world");
                 // Destroy(gameObject);
-                 Application.LoadLevel ("Level 1");
+                 Application.LoadLevel("Level 1");
                 
             }
+
         }
         public virtual void ControlAnimatorRootMotion()
         {
