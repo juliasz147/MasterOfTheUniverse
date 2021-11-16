@@ -8,6 +8,7 @@ namespace Invector.vCharacterController
         public TMP_Text coinCounter_TMP;
         private static int numOfCoins = 0;
         // public int progressBarValue = 10;
+        public GameObject naturalElement;
 
         private void Update()
         {
@@ -20,6 +21,11 @@ namespace Invector.vCharacterController
                 
             }
 
+            naturalElement.SetActive(false);
+            if (numOfCoins == 3)
+            {
+                naturalElement.SetActive(true);
+            }
         }
         public virtual void ControlAnimatorRootMotion()
         {
