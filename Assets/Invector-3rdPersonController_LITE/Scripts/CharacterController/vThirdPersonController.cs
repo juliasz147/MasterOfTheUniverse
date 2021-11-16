@@ -10,6 +10,8 @@ namespace Invector.vCharacterController
         // public int progressBarValue = 10;
         public GameObject naturalElement;
 
+        public static float damage = 10f;
+
         private void Update()
         {
             coinCounter_TMP.text = numOfCoins.ToString();
@@ -160,7 +162,9 @@ namespace Invector.vCharacterController
             if (collision.gameObject.tag == "Enemy")
             {
                 Debug.Log("Collided with enemy");
-                Destroy(gameObject);
+                GetComponent<PlayerHealth>().ApplyDamage(damage);
+                //Application.LoadLevel("Level 1");
+                //Destroy(gameObject);
             }
 
             if (collision.gameObject.tag == "NaturalElement")
