@@ -157,6 +157,12 @@ namespace Invector.vCharacterController
                 Destroy(gameObject);
             }
 
+            if (collision.gameObject.tag == "NaturalElement")
+            {
+                Debug.Log("Collected Natural Element");
+                Destroy(collision.gameObject);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            }
         }
     }
 }
