@@ -10,4 +10,10 @@ public class WinOrLoseScreen : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         //GameSettings.Instance.numberOfEnemyKilled = 0;
     }
+
+    public void RestartLevel1ButtonClick()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        //GameSettings.Instance.numberOfEnemyKilled = 0;
+    }
 }
