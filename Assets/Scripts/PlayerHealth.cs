@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
             PlayerDeath();
 
             isDead = true;
+            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
         }
     }
 
