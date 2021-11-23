@@ -20,8 +20,22 @@ namespace Invector.vCharacterController
             {
                 Debug.Log("player has fallen off the world");
                 // Destroy(gameObject);
-                 Application.LoadLevel("Level 1");
-                
+                //Application.LoadLevel("Level 1");
+                if (Application.loadedLevelName == "Level 1")
+                {
+                    Application.LoadLevel("Level 1");
+                }
+
+                if (Application.loadedLevelName == "Level 2")
+                {
+                    Application.LoadLevel("Level 2");
+                }
+
+                if (Application.loadedLevelName == "Level 3")
+                {
+                    Application.LoadLevel("Level 3");
+                }
+
             }
 
             naturalElement.SetActive(false);
