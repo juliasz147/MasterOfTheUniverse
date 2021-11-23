@@ -6,7 +6,7 @@ namespace Invector.vCharacterController
     public class vThirdPersonController : vThirdPersonAnimator
     {
         public TMP_Text coinCounter_TMP;
-        private static int numOfCoins = 0;
+        private int numOfCoins = 0;
         // public int progressBarValue = 10;
         public GameObject naturalElement;
 
