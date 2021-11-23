@@ -31,4 +31,9 @@ public class WinOrLoseScreen : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
     }
+
+    public void StartGameButtonClick()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
 }
