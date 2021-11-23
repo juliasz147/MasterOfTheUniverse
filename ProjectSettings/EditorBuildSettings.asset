@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AurynSky/Forest Pack/Scenes/Level 3.unity
     guid: 6a35a0837e40bd44b9d8a2a1686dcc25
+  - enabled: 1
+    path: Assets/AurynSky/Forest Pack/Scenes/Level2WinScene.unity
+    guid: 8a3a9059323364c45834fd755455b15c
+  - enabled: 1
+    path: Assets/AurynSky/Forest Pack/Scenes/Level3WinScene.unity
+    guid: 35593f2c220790146aa5577ad9e802b4
   m_configObjects: {}

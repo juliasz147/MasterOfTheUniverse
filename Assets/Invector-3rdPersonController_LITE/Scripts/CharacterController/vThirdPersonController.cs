@@ -39,9 +39,33 @@ namespace Invector.vCharacterController
             }
 
             naturalElement.SetActive(false);
-            if (numOfCoins == 3)
+           /* if (numOfCoins == 3)
             {
                 naturalElement.SetActive(true);
+            }*/
+
+            if (Application.loadedLevelName == "Level 1")
+            {
+                if (numOfCoins == 3)
+                {
+                    naturalElement.SetActive(true);
+                }
+            }
+
+            if (Application.loadedLevelName == "Level 2")
+            {
+                if (numOfCoins == 5)
+                {
+                    naturalElement.SetActive(true);
+                }
+            }
+
+            if (Application.loadedLevelName == "Level 3")
+            {
+                if (numOfCoins == 8)
+                {
+                    naturalElement.SetActive(true);
+                }
             }
         }
         public virtual void ControlAnimatorRootMotion()
@@ -184,9 +208,29 @@ namespace Invector.vCharacterController
 
             if (collision.gameObject.tag == "NaturalElement")
             {
-                Debug.Log("Collected Natural Element");
+                /*Debug.Log("Collected Natural Element");
                 Destroy(collision.gameObject);
-                UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(3);*/
+                if (Application.loadedLevelName == "Level 1")
+                {
+                    Debug.Log("Collected Natural Element");
+                    Destroy(collision.gameObject);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+                }
+
+                if (Application.loadedLevelName == "Level 2")
+                {
+                    Debug.Log("Collected Natural Element");
+                    Destroy(collision.gameObject);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(6);
+                }
+
+                if (Application.loadedLevelName == "Level 3")
+                {
+                    Debug.Log("Collected Natural Element");
+                    Destroy(collision.gameObject);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+                }
             }
         }
     }
