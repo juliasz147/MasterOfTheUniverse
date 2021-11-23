@@ -21,4 +21,9 @@ public class WinOrLoseScreen : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
     }
+
+    public void RestartLevel2ButtonClick()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
 }
