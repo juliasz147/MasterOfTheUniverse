@@ -14,6 +14,7 @@ namespace Invector.vCharacterController
 
         private void Update()
         {
+
             coinCounter_TMP.text = numOfCoins.ToString();
             if(gameObject.transform.position.y <= 12)
             {
