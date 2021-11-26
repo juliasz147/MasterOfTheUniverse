@@ -11,6 +11,7 @@ namespace Invector.vCharacterController
         public GameObject naturalElement;
 
         public static float damage = 10f;
+        public AudioSource audioSource;
 
         private void Update()
         {
@@ -194,6 +195,7 @@ namespace Invector.vCharacterController
             if (collision.gameObject.tag == "Coin")
             {
                 Debug.Log("Coin gained");
+                audioSource.Play();
                 Destroy(collision.gameObject);
                 numOfCoins += 1;
             }
