@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static float health = 100f;
+    public float health = 100f;
 
     private bool isDead;
 
@@ -27,9 +27,10 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0f)
         {
-            PlayerDeath();
+            //PlayerDeath();
 
             isDead = true;
+
             if (Application.loadedLevelName == "Level 1")
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene(4);
@@ -53,11 +54,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void PlayerDeath()
-    {
-        Invoke("RestartGame", 3f);
+    //void PlayerDeath()
+    //{
+    //    Invoke("RestartGame", 3f);
         
-    }
+    //}
 
     public void DisplayHealthStats(float healthValue)
     {
@@ -67,10 +68,10 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    void RestartGame()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 1");
-    }
+    //void RestartGame()
+    //{
+    //    UnityEngine.SceneManagement.SceneManager.LoadScene("Level 1");
+    //}
 
 
 }
