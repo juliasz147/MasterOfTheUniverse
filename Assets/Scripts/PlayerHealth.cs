@@ -30,7 +30,26 @@ public class PlayerHealth : MonoBehaviour
             PlayerDeath();
 
             isDead = true;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            if (Application.loadedLevelName == "Level 1")
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            }
+            //UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            if (Application.loadedLevelName == "Level 2")
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+                //health = 100;
+            }
+
+            if (Application.loadedLevelName == "Level 3")
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(9);
+            }
+
+            if (Application.loadedLevelName == "Level 4")
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+            }
         }
     }
 

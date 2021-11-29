@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AurynSky/Forest Pack/Scenes/Level3WinScene.unity
     guid: 35593f2c220790146aa5577ad9e802b4
+  - enabled: 1
+    path: Assets/AurynSky/Forest Pack/Scenes/Level2LoseScene.unity
+    guid: 26d0eb9820a18504fb4767675f661e4c
+  - enabled: 1
+    path: Assets/AurynSky/Forest Pack/Scenes/Level3LoseScene.unity
+    guid: 65df663815bf72c47ba0c85e248ccb80
   m_configObjects: {}

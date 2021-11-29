@@ -37,6 +37,10 @@ namespace Invector.vCharacterController
                     Application.LoadLevel("Level 3");
                 }
 
+                if (Application.loadedLevelName == "Level 4")
+                {
+                    Application.LoadLevel("Level 4");
+                }
             }
 
             naturalElement.SetActive(false);
@@ -64,6 +68,14 @@ namespace Invector.vCharacterController
             if (Application.loadedLevelName == "Level 3")
             {
                 if (numOfCoins == 8)
+                {
+                    naturalElement.SetActive(true);
+                }
+            }
+
+            if (Application.loadedLevelName == "Level 4")
+            {
+                if (numOfCoins == 12)
                 {
                     naturalElement.SetActive(true);
                 }
@@ -228,6 +240,13 @@ namespace Invector.vCharacterController
                 }
 
                 if (Application.loadedLevelName == "Level 3")
+                {
+                    Debug.Log("Collected Natural Element");
+                    Destroy(collision.gameObject);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+                }
+
+                if (Application.loadedLevelName == "Level 4")
                 {
                     Debug.Log("Collected Natural Element");
                     Destroy(collision.gameObject);
