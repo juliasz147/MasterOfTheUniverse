@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
 
             if (Application.loadedLevelName == "Level 4")
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(10);
             }
         }
     }

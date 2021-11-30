@@ -36,4 +36,9 @@ public class WinOrLoseScreen : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
+
+    public void RestartLevel4ButtonClick()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(11);
+    }
 }
