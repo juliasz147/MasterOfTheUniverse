@@ -75,7 +75,7 @@ namespace Invector.vCharacterController
 
             if (Application.loadedLevelName == "Level 4")
             {
-                if (numOfCoins == 12)
+                if (numOfCoins == 10)
                 {
                     naturalElement.SetActive(true);
                 }
