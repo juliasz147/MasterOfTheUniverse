@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AurynSky/Forest Pack/Scenes/Level 4.unity
     guid: 6009e37c0de1c5f4bb25793aa05f6948
+  - enabled: 1
+    path: Assets/AurynSky/Forest Pack/Scenes/Level4WinScene.unity
+    guid: 9536fca14d475d049a33fe7110f2be56
   m_configObjects: {}

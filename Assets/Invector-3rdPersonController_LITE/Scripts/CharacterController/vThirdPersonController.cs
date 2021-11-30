@@ -250,7 +250,7 @@ namespace Invector.vCharacterController
                 {
                     Debug.Log("Collected Natural Element");
                     Destroy(collision.gameObject);
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene(12);
                 }
             }
         }

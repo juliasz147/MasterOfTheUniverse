@@ -41,4 +41,9 @@ public class WinOrLoseScreen : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(11);
     }
+
+    public void ExitButtonClick()
+    {
+        Application.Quit();
+    }
 }
