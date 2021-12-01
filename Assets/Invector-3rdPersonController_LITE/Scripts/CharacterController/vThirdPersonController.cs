@@ -12,6 +12,7 @@ namespace Invector.vCharacterController
 
         public static float damage = 10f;
         public AudioSource audioSource;
+        public AudioSource enemyHitSound;
 
         private void Update()
         {
@@ -215,44 +216,40 @@ namespace Invector.vCharacterController
             if (collision.gameObject.tag == "Enemy")
             {
                 Debug.Log("Collided with enemy");
+                enemyHitSound.Play();
                 GetComponent<PlayerHealth>().ApplyDamage(damage);
-                //Application.LoadLevel("Level 1");
-                //Destroy(gameObject);
+               
             }
 
             if (collision.gameObject.tag == "NaturalElement")
             {
-                /*Debug.Log("Collected Natural Element");
-                Destroy(collision.gameObject);
-                UnityEngine.SceneManagement.SceneManager.LoadScene(3);*/
+                Debug.Log("Collected Natural Element");
+
                 if (Application.loadedLevelName == "Level 1")
-                {
-                    Debug.Log("Collected Natural Element");
-                    Destroy(collision.gameObject);
+                {                   
+                    //Destroy(collision.gameObject);
                     UnityEngine.SceneManagement.SceneManager.LoadScene(3);
                 }
 
                 if (Application.loadedLevelName == "Level 2")
                 {
-                    Debug.Log("Collected Natural Element");
-                    Destroy(collision.gameObject);
+                   // Destroy(collision.gameObject);
                     UnityEngine.SceneManagement.SceneManager.LoadScene(6);
                 }
 
                 if (Application.loadedLevelName == "Level 3")
-                {
-                    Debug.Log("Collected Natural Element");
-                    Destroy(collision.gameObject);
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(7);
+                {       
+                   // Destroy(collision.gameObject);
+                   UnityEngine.SceneManagement.SceneManager.LoadScene(7);
                 }
 
                 if (Application.loadedLevelName == "Level 4")
-                {
-                    Debug.Log("Collected Natural Element");
-                    Destroy(collision.gameObject);
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(12);
+                {         
+                  //  Destroy(collision.gameObject);
+                   UnityEngine.SceneManagement.SceneManager.LoadScene(12);
                 }
             }
         }
+
     }
 }
