@@ -378,7 +378,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 328211489}
         m_TargetAssemblyTypeName: WinOrLoseScreen, Assembly-CSharp
-        m_MethodName: OnGoToLevel3ButtonClick
+        m_MethodName: RestartLevel4ButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
