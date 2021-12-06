@@ -14,6 +14,12 @@ namespace Invector.vCharacterController
         public AudioSource audioSource;
         public AudioSource enemyHitSound;
 
+        // Use this for initialization
+        void Start()
+        {
+            //Set Cursor to not be visible
+            Cursor.visible = false;
+        }
         private void Update()
         {
 

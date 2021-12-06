@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class WinOrLoseScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Use this for initialization
+    void Start()
+    {
+        //Set Cursor to not be visible
+        Cursor.visible = true;
+    }
+
     public void OnGoToLevel2ButtonClick()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
